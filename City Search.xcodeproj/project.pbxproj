@@ -70,6 +70,8 @@
 		21B839502A15BF3E00AF2EB0 /* mockCities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockCities.json; sourceTree = "<group>"; };
 		21B839522A15C3A500AF2EB0 /* mockEmptyCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockEmptyCities.json; sourceTree = "<group>"; };
 		21B839572A15CE5100AF2EB0 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		21C2A2322A15D36B00113503 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		21C2A2342A15D89100113503 /* City Search.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "City Search.xctestplan"; sourceTree = "<group>"; };
 		28F36C89771E3A15BE63F820 /* Pods_City_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_City_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A387907AC1ECCC87A9084BC6 /* Pods-City Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-City Search.debug.xcconfig"; path = "Target Support Files/Pods-City Search/Pods-City Search.debug.xcconfig"; sourceTree = "<group>"; };
 		B1AC91385678D19C41FCA54C /* Pods-City SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-City SearchTests.release.xcconfig"; path = "Target Support Files/Pods-City SearchTests/Pods-City SearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,8 @@
 		211E1E2F2A0DE2CA008A9ACC = {
 			isa = PBXGroup;
 			children = (
+				21C2A2342A15D89100113503 /* City Search.xctestplan */,
+				21C2A2322A15D36B00113503 /* README.md */,
 				211E1E3A2A0DE2CA008A9ACC /* City Search */,
 				21B839462A15BBA000AF2EB0 /* City SearchTests */,
 				211E1E392A0DE2CA008A9ACC /* Products */,

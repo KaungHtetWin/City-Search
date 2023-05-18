@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:../City Search.xctestplan"
+            reference = "container:City Search.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

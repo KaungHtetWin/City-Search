@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "E6FC6151-91FA-4419-AA17-97B7F9408040",
+      "name" : "Configuration",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:City Search.xcodeproj",
+          "identifier" : "211E1E372A0DE2CA008A9ACC",
+          "name" : "City Search"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:City Search.xcodeproj",
+      "identifier" : "211E1E372A0DE2CA008A9ACC",
+      "name" : "City Search"
+    },
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:City Search.xcodeproj",
+        "identifier" : "21B839442A15BBA000AF2EB0",
+        "name" : "City SearchTests"
+      }
+    }
+  ],
+  "version" : 1
+}
