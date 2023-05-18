@@ -29,12 +29,13 @@ The app is written in UIKit and **MVVM + RxSwift** architecture. **60.3%** Code 
 Use **UITableView** for data visualisation. 
 
 ## Unit Test
+
 **CityOfflineManager.swift**, main logic implementation, **100%** Code coverage.
 **HomeViewControllerTests.swift** test city's cells configuration are showing properly or not. Import **RxTest** to check the implementation **Rx** related function.
 
 ### Filter algorithm 
 
- To improve **Time efficiency** for the filter algorithm, implemented filter by using a binary search algorithm. Need to modify normal exact binary search logic. Our requirement needs to match the initial characters of the target string. We need to remove the data which is already matched.
+  To improve **Time efficiency** for the filter algorithm, grouped by first charactor and keep in Dictionary and implemented filter by using a binary search algorithm. Need to modify normal exact binary search logic. Our requirement needs to match the initial characters of the target string. We need to remove the data which is already matched.
  ```
 if tempCityList[midpoint].name.lowercased().hasPrefix(text.lowercased()) {
   cityList.append(tempCityList[midpoint])
