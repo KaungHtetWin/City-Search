@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" rowHeight="75" id="ATs-T2-4bj" customClass="CityCell" customModule="City_Search" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ATs-T2-4bj" id="vue-9v-JEK">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAQ-MB-cu8">
+                        <rect key="frame" x="20" y="4" width="353" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBu-TX-YqJ">
+                        <rect key="frame" x="20" y="39" width="353" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fAQ-MB-cu8" firstAttribute="leading" secondItem="vue-9v-JEK" secondAttribute="leading" constant="20" id="Buz-i5-Wx1"/>
+                    <constraint firstItem="XBu-TX-YqJ" firstAttribute="trailing" secondItem="fAQ-MB-cu8" secondAttribute="trailing" id="EuK-0e-pbQ"/>
+                    <constraint firstAttribute="trailing" secondItem="fAQ-MB-cu8" secondAttribute="trailing" constant="20" id="GWh-VE-LyN"/>
+                    <constraint firstItem="fAQ-MB-cu8" firstAttribute="top" secondItem="vue-9v-JEK" secondAttribute="top" constant="4" id="NoH-KJ-u4a"/>
+                    <constraint firstItem="XBu-TX-YqJ" firstAttribute="leading" secondItem="fAQ-MB-cu8" secondAttribute="leading" id="YQt-hA-DSO"/>
+                    <constraint firstItem="XBu-TX-YqJ" firstAttribute="top" secondItem="fAQ-MB-cu8" secondAttribute="bottom" constant="14" id="xMy-oP-7Em"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XBu-TX-YqJ" secondAttribute="bottom" constant="4" id="zPZ-dL-nwA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cityNameLabel" destination="fAQ-MB-cu8" id="FvU-lB-VMF"/>
+                <outlet property="locationLabel" destination="XBu-TX-YqJ" id="iiO-Tb-5Hq"/>
+            </connections>
+            <point key="canvasLocation" x="-489.3129770992366" y="47.535211267605639"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
