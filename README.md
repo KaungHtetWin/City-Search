@@ -44,9 +44,9 @@ if tempCityList[midpoint].name.lowercased().hasPrefix(text.lowercased()) {
  ```
 
 ## ScreenShots
-![](/Screenshots/Simulator Screenshot - iPhone 14 Pro - 2023-05-18 at 11.17.37.png)
-![](/Screenshots/Simulator Screenshot - iPhone 14 Pro - 2023-05-18 at 11.17.42.png)
-![](/Screenshots/Simulator Screenshot - iPhone 14 Pro - 2023-05-18 at 11.17.49.png)
+![](/Screenshots/1.png)
+![](/Screenshots/2.png)
+![](/Screenshots/3.png)
 
 ## Getting Started
 
