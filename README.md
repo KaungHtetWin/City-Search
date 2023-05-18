@@ -9,19 +9,19 @@ Search city information from provided local file
 ### Features
 
 - [x] Home
-    - User able to filter initial characters of the target string.
+  - User able to filter initial characters of the target string.
 - [x] Details
-    - When tapped, User able to see the location of that city on a map.
+  - When tapped, the User can see the location of that city on a map.
 
 
 ### Technical Specification
 
-The app is written and built with this following hardware and sofware specification
+The app is written and built with the following hardware and software specification
 
-- XCode Version : Version 14.1 (14B47b)
+- XCode Version: Version 14.1 (14B47b)
 - macOS Version: macOS Ventra 14.3 (14E222b)
 - Swift Version: 5
-- Minium iOS Version : 13.0
+- Minimum iOS Version: 13.0
 
 ### Development Specification
 
@@ -30,23 +30,21 @@ Use **UITableView** for data visualisation.
 
 ## Unit Test
 **CityOfflineManager.swift**, main logic implementation, **100%** Code coverage.
-**HomeViewControllerTests.swift** test city's cells configuartion are show properly or not. Import **RxTest** to check implementation **Rx** related function.
+**HomeViewControllerTests.swift** test city's cells configuration are showing properly or not. Import **RxTest** to check the implementation **Rx** related function.
 
 ### Filter algorithm 
 
- To improve Time efficiency for filter algorithm, implemented filter by using binary search algorithm. Need to modification normal exact binary search logic. Our requirement need to matches the initial characters of the target string. We need to remove the data which is already match.
+ To improve **Time efficiency** for the filter algorithm, implemented filter by using a binary search algorithm. Need to modify normal exact binary search logic. Our requirement needs to match the initial characters of the target string. We need to remove the data which is already matched.
  ```
 if tempCityList[midpoint].name.lowercased().hasPrefix(text.lowercased()) {
-    cityList.append(tempCityList[midpoint])
-    tempCityList.remove(at: midpoint)
-    last = tempCityList.count - 1
+  cityList.append(tempCityList[midpoint])
+  tempCityList.remove(at: midpoint)
+  last = tempCityList.count - 1
 }
  ```
 
 ## ScreenShots
-![](/Screenshots/1.png)
-![](/Screenshots/2.png)
-![](/Screenshots/3.png)
+![](/Screenshots/1.png)![](/Screenshots/2.png)![](/Screenshots/3.png)
 
 ## Getting Started
 
@@ -55,7 +53,7 @@ This project is written with:
 * Swift 5
 
 ### Installation
-1. Go to project directory in Terminal
+1. Go to the project directory in Terminal
 ```
 cd <Your Downloaded Project Directory>
 ```
