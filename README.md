@@ -58,7 +58,7 @@ This project is written with:
 ### Installation
 1. Go to the project directory in Terminal
 ```
-cd <Your Downloaded Project Directory>
+cd <Project Directory>
 ```
 2. Run pod install in Terminal
 ```
