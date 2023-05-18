@@ -44,8 +44,9 @@ if tempCityList[midpoint].name.lowercased().hasPrefix(text.lowercased()) {
  ```
 
 ## ScreenShots
+
 | City List              | Searched City          | City Details          |
-| ---------------------- | ---------------------- |
+| ---------------------- | ---------------------- | --------------------- |
 | ![city-list](/Screenshots/1.png) | ![searched-city](/Screenshots/2.png) | ![city-details](/Screenshots/3.png) 
 
 ## Getting Started
