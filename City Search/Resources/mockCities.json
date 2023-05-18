@@ -1,0 +1,38 @@
+[
+    {
+        "country":"UA",
+        "name":"Hurzuf",
+        "_id":707860,
+        "coord":{
+            "lon":34.283333,
+            "lat":44.549999
+        }
+    },
+    {
+        "country":"TH",
+        "name":"Bangkok",
+        "_id":707861,
+        "coord":{
+            "lon":44.549999,
+            "lat": 100.5018
+        }
+    },
+    {
+        "country":"MY",
+        "name":"Yangon",
+        "_id":707862,
+        "coord":{
+            "lon":96.1735,
+            "lat":16.8409
+        }
+    },
+    {
+        "country":"MY",
+        "name":"Yankin",
+        "_id":707863,
+        "coord":{
+            "lon":96.1735,
+            "lat":16.8409
+        }
+    }
+]

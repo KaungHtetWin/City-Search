@@ -36,7 +36,7 @@ class HomeViewModel: HomeViewModelInput, HomeViewModelOutput, HomeViewModelType 
     var input: HomeViewModelInput { return self }
     var output: HomeViewModelOutput { return self }
     
-    init(service: CityOfflineManagerLogic = CityOfflineManager.shared) {
+    init(service: CityOfflineManagerLogic = CityOfflineManager(fileName: "cities")) {
         self.cityOfflineManagerLogic = service
         searchText
             .flatMapLatest { city in

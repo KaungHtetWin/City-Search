@@ -19,4 +19,8 @@ extension UIStoryboard {
     class func cityDetailsViewController() -> CityDetailsViewController? {
         return StoryBoard.Main.instance(CityDetailsViewController.className) as? CityDetailsViewController
     }
+    
+    class func homeViewController() -> HomeViewController? {
+        return StoryBoard.Main.instance(HomeViewController.className) as? HomeViewController
+    }
 }

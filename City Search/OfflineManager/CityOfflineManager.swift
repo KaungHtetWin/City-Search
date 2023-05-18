@@ -9,27 +9,17 @@ import Foundation
 import RxSwift
 
 protocol CityOfflineManagerLogic {
-    func getCityList() -> Single<[City]>
     func search(query: String) -> Observable<[City]>
 }
 
 class CityOfflineManager: CityOfflineManagerLogic {
     
-    static let shared = CityOfflineManager()
     private let bag = DisposeBag()
-    private var city: [City] = []
+    var city: [City] = []
     
-    init() {
-        city = loadJson(filename: "cities")?
-            .sorted(by: { $0.name < $1.name }) ?? []
-    }
-    
-    func getCityList() -> Single<[City]> {
-        return Single.create { [weak self] event -> Disposable in
-            guard let self = self else { return Disposables.create() }
-            event(.success(self.city))
-            return Disposables.create()
-        }
+    init(fileName: String) {
+        city = loadJson(fileName)
+            .sorted(by: { $0.name < $1.name })
     }
     
     func search(query: String) -> Observable<[City]> {
@@ -41,18 +31,14 @@ class CityOfflineManager: CityOfflineManagerLogic {
         }
     }
     
-    private func loadJson(filename fileName: String) -> [City]? {
+    private func loadJson(_ fileName: String) -> [City] {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([City].self, from: data)
-                return jsonData
-            } catch {
-                print("error:\(error.localizedDescription)")
-            }
+            guard let data = try? Data(contentsOf: url) else { return [] }
+            let decoder = JSONDecoder()
+            let jsonData = try? decoder.decode([City].self, from: data)
+            return jsonData ?? []
         }
-        return nil
+        return []
     }
     
     func binarySearch(text: String) -> [City] {
@@ -60,12 +46,13 @@ class CityOfflineManager: CityOfflineManagerLogic {
         var tempCityList = city
         var cityList: [City] = []
         var first = 0
-        var last = city.count - 1
+        var last = tempCityList.count - 1
         while first <= last {
             let midpoint = (first + last)/2
             if tempCityList[midpoint].name.lowercased().hasPrefix(text.lowercased()) {
                 cityList.append(tempCityList[midpoint])
                 tempCityList.remove(at: midpoint)
+                last = tempCityList.count - 1
             } else if tempCityList[midpoint].name.lowercased() > text.lowercased() {
                 last = midpoint - 1
             } else {

@@ -8,6 +8,7 @@
 import Foundation
 // MARK: - City
 struct City: Codable {
+
     let country, name: String
     let id: Int?
     let coord: Coord?
@@ -16,6 +17,13 @@ struct City: Codable {
         case country, name
         case id = "_id"
         case coord
+    }
+
+}
+
+extension City: Equatable {
+    static func == (lhs: City, rhs: City) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

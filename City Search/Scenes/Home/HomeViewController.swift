@@ -17,26 +17,7 @@ class HomeViewController: UIViewController {
     // MARK: - Dependencies
     private let bag = DisposeBag()
     var viewModel: HomeViewModel!
-    private var pendingRequestWorkItem: DispatchWorkItem?
-    
-    var cities: [HomeModel] = [] {
-        didSet {
-            tblCity.reloadData()
-        }
-    }
-    
-    private lazy var refreshControl: UIRefreshControl = {
-        let control = UIRefreshControl()
-        control.tintColor = .lightGray
-        return control
-    }()
-    
     // MARK: Object lifecycle
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -53,7 +34,7 @@ class HomeViewController: UIViewController {
     private func setup() {
         title = "City"
         let viewController = self
-        let vm = HomeViewModel(service: CityOfflineManager.shared)
+        let vm = HomeViewModel(service: CityOfflineManager(fileName: "cities"))
         viewController.viewModel = vm
     }
     
